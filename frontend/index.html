@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VagaFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <span class="logo">VagaFlow</span>
+    <button class="btn-primario" onclick="abrirModal()">+ Adicionar candidatura</button>
+  </header>
+
+  <main class="conteudo">
+    <h1>Minhas Vagas</h1>
+    <p class="subtitulo">Organize candidaturas, acompanhe entrevistas e mantenha sua busca por oportunidades sob controle.</p>
+
+    <div id="lista-vagas" class="lista"></div>
+  </main>
+<div id="overlay" class="overlay" style="display:none;">
+    <div class="modal">
+      <div class="modal-topo">
+        <h2>Nova candidatura</h2>
+        <button class="btn-icone" onclick="fecharModal()" aria-label="Fechar">✕</button>
+      </div>
+
+      <label>Empresa *</label>
+      <input type="text" id="empresa">
+
+      <label>Cargo *</label>
+      <input type="text" id="cargo">
+
+      <label>Link da vaga *</label>
+      <input type="text" id="link">
+
+      <label>Fonte da vaga</label>
+      <select id="fonte">
+        <option value="LinkedIn">LinkedIn</option>
+        <option value="Site da empresa">Site da empresa</option>
+        <option value="Gupy">Gupy</option>
+        <option value="Outros">Outros</option>
+      </select>
+
+      <label>Anotações</label>
+      <textarea id="anotacoes"></textarea>
+
+      <p id="msg-erro" class="msg-erro"></p>
+
+      <button class="btn-primario" onclick="salvarVaga()">Salvar candidatura</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Adicionar Candidatura</title>
+</head>
+<body>
+  <h1>Adicionar Candidatura</h1>
+  <p><a href="index.html">← Voltar para a lista</a></p>
+
+  <form id="form-vaga">
+    <p>
+      <label>Empresa *<br>
+        <input type="text" id="empresa">
+      </label>
+    </p>
+    <p>
+      <label>Cargo *<br>
+        <input type="text" id="cargo">
+      </label>
+    </p>
+    <p>
+      <label>Link da vaga *<br>
+        <input type="text" id="link">
+      </label>
+    </p>
+    <p>
+      <label>Fonte da vaga<br>
+        <select id="fonte">
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Site da empresa">Site da empresa</option>
+          <option value="Gupy">Gupy</option>
+          <option value="Outros">Outros</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <label>Anotações<br>
+        <textarea id="anotacoes"></textarea>
+      </label>
+    </p>
+
+    <button type="submit">Salvar candidatura</button>
+  </form>
+
+  <p id="mensagem"></p>
+
+  <script src="adicionar.js"></script>
+</body>
+</html>

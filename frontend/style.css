@@ -1,0 +1,161 @@
+:root {
+  --roxo: #534AB7;
+  --roxo-escuro: #3C3489;
+  --fundo: #F4F3FA;
+  --cartao: #FFFFFF;
+  --borda: #E5E3EF;
+  --texto: #2C2C2A;
+  --texto-suave: #5F5E5A;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--cartao);
+  border-bottom: 1px solid var(--borda);
+}
+
+.logo { font-size: 20px; font-weight: 600; color: var(--roxo); }
+
+.btn-primario {
+  background: var(--roxo);
+  color: #FFF;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+.btn-primario:hover { background: var(--roxo-escuro); }
+
+.conteudo { max-width: 900px; margin: 0 auto; padding: 32px; }
+
+h1 { font-size: 26px; margin: 0 0 6px; }
+.subtitulo { color: var(--texto-suave); margin: 0 0 28px; }
+
+.lista { display: flex; flex-direction: column; gap: 12px; }
+
+.cartao {
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.cartao-linha { display: flex; align-items: center; gap: 12px; }
+.cartao-info { flex: 1; }
+.cartao-empresa { font-size: 16px; font-weight: 500; margin: 0; }
+.cartao-cargo { font-size: 14px; color: var(--texto-suave); margin: 0; }
+
+.status { margin-left: auto; }
+
+.status, .link-vaga, .acoes {
+  flex-shrink: 0;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 64px;
+  justify-content: flex-end;
+}
+
+.link-vaga { color: var(--roxo); text-decoration: none; font-size: 14px; }
+.link-vaga:hover { text-decoration: underline; }
+
+.status {
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.status-candidatada { background: #E6F1FB; color: #0C447C; }
+.status-processo    { background: #FAEEDA; color: #633806; }
+.status-proposta    { background: #EAF3DE; color: #27500A; }
+.status-rejeitada   { background: #FCEBEB; color: #791F1F; }
+
+.btn-icone { background: none; border: none; cursor: pointer; font-size: 16px; }
+.btn-deletar { color: #A32D2D; }
+
+.nota {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--fundo);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+.vazio { text-align: center; color: var(--texto-suave); padding: 40px; }
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: var(--cartao);
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.modal-topo h2 { margin: 0; font-size: 20px; }
+
+.modal label {
+  display: block;
+  font-size: 13px;
+  color: var(--texto-suave);
+  margin: 12px 0 4px;
+}
+
+.modal input, .modal select, .modal textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+.modal textarea { min-height: 70px; resize: vertical; }
+
+.modal .btn-primario {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.msg-erro { color: #A32D2D; font-size: 14px; margin: 12px 0 0; min-height: 20px; }
